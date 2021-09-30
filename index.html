@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Simon</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+</head>
+
+<body>
+  <h1 id="level-title">Press any key to START</h1>
+  <button class="btnrules" onclick="rules()">RULES</button>
+  <div class="rules">
+    <button class="btnClose" onclick="remRules()">&#10006</button>
+    <h2 style="text-align: center;">How the Simon game works</h2>
+    <ul>
+      <br><br><br><br>
+      <li>
+        The game shows the colors in the sequence. (Ex - blue)
+      </li>
+      <br>
+      <li>
+        The user clicks on the button.
+      </li>
+      <br>
+      <li>
+        Then game shows the next colour. (Ex - red)
+      </li>
+      <br>
+      <li>
+        The user has to remember the sequence is blue, red and so on.
+      </li>
+      <br>
+      <li>
+        Then enter the Sequence from starting (Ex - blue, red ...) at every level
+      </li>
+      <br>
+      <li>
+        If you messes up the sequence, then the game ends
+      </li>
+    </ul>
+  </div>
+  <div class="container">
+    <div class="row">
+
+      <div type="button" id="green" class="btn green">
+
+      </div>
+
+      <div type="button" id="red" class="btn red">
+
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div type="button" id="yellow" class="btn yellow">
+
+      </div>
+      <div type="button" id="blue" class="btn blue">
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+</body>
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- local JS -->
+<script src="script.js"></script>
+
+</html>
