@@ -1,9 +1,11 @@
+// Rules button
 function rules() {
     $(".rules").addClass("showRules");
 }
 function remRules() {
     $(".rules").removeClass("showRules");
 }
+
 // Storing User Clicked Buttons
 var userChosenPattern = [];
 
@@ -103,7 +105,14 @@ $('.btn').click(function (e) {
             console.log("Complete the pattern!");
         }
         else if (!checkAnswer(userChosenPattern.length - 1)) {
-            console.log("Wrong Answer!");
+            flash("red");
+            console.log("Wrong Pattern!");
+            // Playing wrong sound
+            var sound = new Audio('sounds/wrong.mp3');
+            sound.play();
+            setTimeout(() => {
+                location.reload();
+            }, 1500);
         }
         if (gamePattern.length === userChosenPattern.length) {
             console.log(gamePattern + " " + userChosenPattern);
@@ -117,16 +126,6 @@ $('.btn').click(function (e) {
                 }, 1500);
                 // Emptying userChosenPattern
                 userChosenPattern.length = 0;
-            }
-            else {
-                flash("red");
-                console.log("Wrong Pattern!");
-                // Playing wrong sound
-                var sound = new Audio('sounds/wrong.mp3');
-                sound.play();
-                setTimeout(() => {
-                    location.reload();
-                }, 1500);
             }
         }
     }
